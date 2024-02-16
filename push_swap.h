@@ -6,7 +6,7 @@
 /*   By: avaldin <avaldin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 10:24:06 by avaldin           #+#    #+#             */
-/*   Updated: 2024/01/31 09:49:23 by avaldin          ###   ########.fr       */
+/*   Updated: 2024/02/16 18:13:57 by avaldin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	reverse_rotate(t_list **arg_a);
 void	reverse_rotate_a(t_list **arg_a);
 bool	ft_sorting(t_list **stack_a, t_list **stack_b);
 int		find_a_rank(t_list **stack, int rank);
-void	what_rotate_a(int p_a, t_list **stack_a);
+void	what_rotate_a(int p_a, t_list **stack_a, t_list **stack_b, bool push);
 t_list	*lst_next(t_list *lst, t_list **stack_a);
 void	false_sorted(t_list **stack_a);
 bool	sorted(t_list **stack_a, int pivot);

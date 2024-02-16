@@ -12,20 +12,30 @@
 
 #include "push_swap.h"
 
-void	what_rotate_a(int p_a, t_list **stack_a)
+void	what_rotate_a(int p_a, t_list **stack_a, t_list **stack_b, bool push)
 {
 	int	size;
+	int	pivot;
 
+	pivot = median(stack_a);
 	size = ft_lstsize(*stack_a);
 	if (p_a > size / 2)
 	{
-		while (p_a++ < size)
+		while ((*stack_a)->rank != pivot)
+		{
+			if (push && (*stack_a)->rank < pivot)
+				push_b(stack_a, stack_b);
 			reverse_rotate_a(stack_a);
+		}
 	}
 	else if (p_a)
 	{
 		while (p_a-- > 0)
+		{
+			if (push && (*stack_a)->rank < pivot)
+				push_b(stack_a, stack_b);    TOUT RECOMMENCER !!!! TESTER SI CA AIDE QUAND ON CHERCHE LA MEDIANNE ON PUSH CEUX SUR LE CHEMIN DE LA MEDIANNE
 			rotate_a(stack_a);
+		}
 	}
 }
 

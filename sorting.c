@@ -106,7 +106,7 @@ bool	ft_sorting(t_list **stack_a, t_list **stack_b)
 
 	if (ft_lstsize(*stack_a) < 6)
 		return (little_sort(stack_a, stack_b));
-	what_rotate_a(find_a_rank(stack_a, median(stack_a)), stack_a);
+	what_rotate_a(find_a_rank(stack_a, median(stack_a)), stack_a, 1);
 	rotate_a(stack_a);
 	separation(stack_a, stack_b, ft_lstlast(*stack_a)->rank);
 	while (*stack_b)
