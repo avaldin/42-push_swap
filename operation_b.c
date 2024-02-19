@@ -6,7 +6,7 @@
 /*   By: avaldin <avaldin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 16:04:17 by avaldin           #+#    #+#             */
-/*   Updated: 2024/01/31 09:20:18 by avaldin          ###   ########.fr       */
+/*   Updated: 2024/02/19 15:15:31 by avaldin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,14 @@ void	reverse_rotate_a(t_list **arg_a)
 	{
 		reverse_rotate(arg_a);
 		write(1, "rra\n", 4);
+	}
+}
+
+void	reverse_rotate_b(t_list **stack_b)
+{
+	if (ft_lstsize(*stack_b) > 1)
+	{
+		reverse_rotate(stack_b);
+		write(1, "rrb\n", 4);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: avaldin <avaldin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 11:39:10 by avaldin           #+#    #+#             */
-/*   Updated: 2024/01/24 11:36:30 by avaldin          ###   ########.fr       */
+/*   Updated: 2024/02/19 15:04:38 by avaldin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ void	fivesort(t_list **stack_a, t_list **stack_b)
 		else
 			rotate_a(stack_a);
 	}
-	what_rotate_a(find_a_rank(stack_a, 0), stack_a);
+	// add find
 }
 
 bool	little_sort(t_list **stack_a, t_list **stack_b)
@@ -110,14 +110,14 @@ bool	little_sort(t_list **stack_a, t_list **stack_b)
 	t_list	*lst;
 
 	lst = *stack_a;
-	while (lst)
-	{
-		if (sorted(stack_a, lst->rank))
-			return (true);
-		else
-			false_sorted(stack_a);
-		lst = lst->next;
-	}
+//	while (lst)
+//	{
+//		if (sorted(stack_a, lst->rank))
+//			return (true);
+//		else
+//			false_sorted(stack_a);
+//		lst = lst->next;
+//	}
 	if (ft_lstsize(*stack_a) == 3)
 		threesort(stack_a);
 	else

@@ -42,13 +42,7 @@ void	push_swap(int argc, char **argv)
 		ft_freeee(argv, argc);
 	if (!stack_a || check_rep(&stack_a) || ft_lstsize(stack_a) < argc - 1)
 		write(STDERR_FILENO, "Error\n", 6);
-	else if (sorted(&stack_a, 0))
-		what_rotate_a(find_a_rank(&stack_a, 0), &stack_a);
-	else
-	{
-		false_sorted(&stack_a);
-		ft_sorting(&stack_a, &stack_b);
-	}
+	ft_sorting(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 }
