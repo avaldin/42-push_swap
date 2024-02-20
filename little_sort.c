@@ -102,25 +102,20 @@ void	fivesort(t_list **stack_a, t_list **stack_b)
 		else
 			rotate_a(stack_a);
 	}
-	// add find
 }
 
-bool	little_sort(t_list **stack_a, t_list **stack_b)
+void	little_sort(t_list **stack_a, t_list **stack_b)
 {
-	t_list	*lst;
-
-	lst = *stack_a;
-//	while (lst)
-//	{
-//		if (sorted(stack_a, lst->rank))
-//			return (true);
-//		else
-//			false_sorted(stack_a);
-//		lst = lst->next;
-//	}
 	if (ft_lstsize(*stack_a) == 3)
 		threesort(stack_a);
 	else
+	{
 		fivesort(stack_a, stack_b);
-	return (true);
+		if (find_the_next(stack_a, 0, 0) > 0)
+			while ((*stack_a)->rank)
+				rotate_a(stack_a);
+		else
+			while ((*stack_a)->rank)
+				reverse_rotate_a(stack_a);
+	}
 }

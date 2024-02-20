@@ -6,23 +6,11 @@
 /*   By: avaldin <avaldin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 10:30:34 by avaldin           #+#    #+#             */
-/*   Updated: 2024/01/17 14:17:24 by avaldin          ###   ########.fr       */
+/*   Updated: 2024/02/20 17:52:58 by avaldin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	false_sorted(t_list **stack_a)
-{
-	t_list	*lst;
-
-	lst = *stack_a;
-	while (lst)
-	{
-		lst->sorted = false;
-		lst = lst->next;
-	}
-}
 
 void	push_swap(int argc, char **argv)
 {
@@ -37,7 +25,6 @@ void	push_swap(int argc, char **argv)
 	stack_b = NULL;
 	arg_process(argc, argv, &stack_a);
 	ranking(&stack_a);
-	false_sorted(&stack_a);
 	if (!argv[0])
 		ft_freeee(argv, argc);
 	if (!stack_a || check_rep(&stack_a) || ft_lstsize(stack_a) < argc - 1)

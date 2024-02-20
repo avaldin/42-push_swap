@@ -6,7 +6,7 @@
 /*   By: avaldin <avaldin@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/24 10:24:06 by avaldin           #+#    #+#             */
-/*   Updated: 2024/02/19 15:02:14 by avaldin          ###   ########.fr       */
+/*   Updated: 2024/02/20 18:09:10 by avaldin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ typedef struct s_list
 {
 	int				num;
 	int				rank;
-	bool			sorted;
 	struct s_list	*next;
 }					t_list;
 
@@ -50,6 +49,8 @@ void	reverse_rotate_a(t_list **arg_a);
 void	reverse_rotate_b(t_list **stack_b);
 void	ft_sorting(t_list **stack_a, t_list **stack_b);
 void	threesort(t_list **stack_a);
-bool	little_sort(t_list **stack_a, t_list **stack_b);
+void	little_sort(t_list **stack_a, t_list **stack_b);
+bool	sorted(t_list **stack_a);
+int		find_the_next(t_list **stack_a, int max, int min);
 
 #endif
