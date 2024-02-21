@@ -29,7 +29,8 @@ void	push_swap(int argc, char **argv)
 		ft_freeee(argv, argc);
 	if (!stack_a || check_rep(&stack_a) || ft_lstsize(stack_a) < argc - 1)
 		write(STDERR_FILENO, "Error\n", 6);
-	ft_sorting(&stack_a, &stack_b);
+	else
+		ft_sorting(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 }
